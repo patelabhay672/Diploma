@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Viewport tag zaroori hai mobile me sahi scale karne ke liye -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modern Dark Portfolio with Form</title>
   <style>
     /* 1. Basic Reset aur Font Setup */
@@ -52,7 +54,7 @@
       max-width: 1000px;
       margin: 80px auto;
       padding: 0 20px;
-      flex-wrap: wrap; /* Chhoti screen par niche aane ke liye */
+      flex-wrap: wrap; 
     }
 
     .hero-text {
@@ -92,7 +94,7 @@
       font-weight: bold;
       font-size: 16px;
       transition: 0.3s;
-      cursor: pointer; /* Button par hath wala icon lane ke liye */
+      cursor: pointer;
     }
 
     .btn:hover {
@@ -169,7 +171,6 @@
       font-size: 14px;
     }
 
-    /* Input aur Textarea ka design */
     .input-group input, 
     .input-group textarea {
       background-color: #121212;
@@ -181,10 +182,9 @@
       transition: 0.3s;
     }
 
-    /* Jab user form field par click kare (Focus effect) */
     .input-group input:focus, 
     .input-group textarea:focus {
-      outline: none; /* Default browser outline hatane ke liye */
+      outline: none;
       border-color: #00e5ff;
       box-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
     }
@@ -200,6 +200,42 @@
     
     footer p {
       color: #b3b3b3;
+    }
+
+    /* 7. Mobile Responsiveness (Media Queries) */
+    @media (max-width: 768px) {
+      /* Navbar chota karna aur links ko wrap karna */
+      nav {
+        gap: 15px;
+        padding: 15px 10px;
+        flex-wrap: wrap;
+      }
+      
+      /* Hero section ko column me badalna (Image upar, text niche) */
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin: 40px auto;
+        gap: 30px;
+      }
+      
+      .hero-text h1 {
+        font-size: 36px;
+      }
+      
+      .hero-image img {
+        width: 200px;
+        height: 200px;
+      }
+      
+      /* Form ki padding choti karna */
+      .contact-form {
+        padding: 20px;
+      }
+      
+      .section-title {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
@@ -221,7 +257,7 @@
     </div>
     
     <div class="hero-image">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDGlSIrKSgLF1fvnUQdoJmZ9Q7xOn-7Sq3u3krA5NIaA&s=10" alt="Abhay Patel">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDGlSIrKSgLF1fvnUQdoJmZ9Q7xOn-7Sq3u3krA5NIaA&s=10" alt="Profile Image">
     </div>
   </header>
 
